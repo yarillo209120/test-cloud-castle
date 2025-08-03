@@ -1,0 +1,26 @@
+@import '@/styles/variables';
+
+.footer {
+  background-color: $background-color;
+  color: $text-hover;
+  padding: 2rem 0;
+  margin-top: 100px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  @extend .container;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 17px;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+}
