@@ -1,0 +1,193 @@
+@use '@/styles/variables' as v;
+
+.hero {
+  padding: 40px 0;
+  position: relative;
+
+  // Элемент container
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (max-width: 768px) {
+      align-items: flex-start;
+    }
+
+    @media (max-width: 375.99px) {
+      gap: 20px;
+      flex-direction:column-reverse;
+    }
+  }
+
+  // Элемент content
+  &__content {
+    flex: 1;
+    max-width: 100%;
+
+    @media (min-width: 769px) {
+      max-width: 600px;
+    }
+  }
+
+  // Элемент title
+  &__title {
+    font-size: 2.8rem;
+    line-height: 95%;
+    font-weight: 500;
+    color: v.$text-primary;
+    margin-bottom: 20px;
+
+    @media (max-width: 375.99px) {
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: 769px) {
+      font-size: 5.4rem;
+      margin-bottom: 24px;
+    }
+  }
+
+  // Элемент text
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 130%;
+    color: v.$text-primary;
+    margin-bottom: 16px;
+
+    @media (max-width: 375.99px) {
+      font-size: 1.4rem;
+      line-height: 140%;
+    }
+
+    @media (min-width: 769px) {
+      font-size: 2rem;
+      line-height: 100%;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Элемент image
+  &__image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+
+    @media (min-width: 769px) {
+      max-width: 694px;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 292px;
+    }
+
+    @media (max-width: 375.99px) {
+      max-width: 292px;
+    }
+  }
+
+  // Элемент img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+  }
+}
+
+// Блок whatsNext
+.whatsNext {
+  position: relative;
+  padding: 40px 0;
+
+  @media (min-width: 769px) {
+    padding: 60px 0;
+  }
+
+  // Элемент container
+  &__container {
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    max-width: 1440px;
+
+    @media (min-width: 769px) {
+      padding: 0 40px;
+    }
+  }
+
+  // Элемент title
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 500;
+    line-height: 95%;
+    color: v.$text-primary;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+
+    @media (max-width: 375.99px) {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: 769px) {
+      font-size: 4.2rem;
+      margin-bottom: 30px;
+    }
+  }
+
+  // Элемент imageWrapper
+  &__imageWrapper {
+    margin: 0 auto 20px;
+    max-width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+
+    @media (min-width: 769px) {
+      max-width: 1376px;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+  }
+
+  // Элемент image
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  // Элемент description
+  &__description {
+    color: v.$text-primary;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0 auto;
+    max-width: 90%;
+
+    @media (max-width: 375.99px) {
+      font-size: 1.6rem;
+      max-width: 95%;
+    }
+
+    @media (min-width: 769px) {
+      font-size: 3rem;
+      line-height: 1.6;
+      max-width: 70%;
+    }
+  }
+}

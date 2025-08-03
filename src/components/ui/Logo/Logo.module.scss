@@ -1,0 +1,15 @@
+@import '@/styles/variables';
+
+.logo {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.primary {
+  color: $primary-color;
+}
+
+.logo:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
