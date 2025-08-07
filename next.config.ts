@@ -1,11 +1,11 @@
-const isProd = process.env.NODE_ENV === 'production';
-const repoName = 'test-cloud-castle';
-
-module.exports = {
+const nextConfig = {
   output: 'export',
-  basePath: isProd ? `/${repoName}` : '',
-  assetPrefix: isProd ? `/${repoName}/` : '',
   images: {
-    unoptimized: true
-  }
+    unoptimized: true,
+  },
+
+  basePath: process.env.NODE_ENV === 'production' ? '/test-cloud-castle' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/test-cloud-castle/' : '',
 }
+
+module.exports = nextConfig
