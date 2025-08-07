@@ -82,7 +82,7 @@ export const Header = () => {
               tabIndex={0}
             >
               <Image
-                src={isMenuOpen ? "/images/burger-close.png" : "/images/burger.png"}
+                src={isMenuOpen ? "images/burger-close.png" : "images/burger.png"}
                 alt={isMenuOpen ? "Закрыть меню" : "Открыть меню"}
                 width={24}
                 height={24}
