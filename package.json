@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && cp -R public/images out/images",
+    "build": "next build && cp -R public/* out/",
     "deploy": "gh-pages -d out",
     "predeploy": "npm run build",
     "start": "next start",
