@@ -4,71 +4,39 @@
   &__container {
     max-width: v.$container-width;
     margin: 0 auto;
-    padding: 0 20px;
-    margin-top: 100px;
-
-    @media (max-width: 768px) {
-      margin-top: 60px;
-      padding: 0 15px;
-    }
-
-    @media (max-width: 375.99px) {
-      margin-top: 40px;
-      padding: 0 10px;
-    }
+    padding: 0 clamp(10px, 2.5vw, 20px);
+    margin-top: clamp(40px, 8vw, 100px);
   }
 
   // Заголовочный блок
   &__header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: clamp(20px, 6vw, 50px);
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-
-    @media (max-width: 768px) {
-      margin-bottom: 30px;
-    }
-
-    @media (max-width: 375.99px) {
-      margin-bottom: 20px;
-    }
   }
 
   &__title {
-    font-size: 4.2rem;
+    font-size: clamp(2.8rem, 5.5vw, 4.2rem);
     font-weight: 500;
     line-height: 95%;
     color: v.$text-primary;
-    margin-bottom: 20px;
+    margin-bottom: clamp(10px, 2.5vw, 20px);
     position: relative;
     display: inline-block;
-
-    @media (max-width: 768px) {
-      font-size: 3.2rem;
-      margin-bottom: 15px;
-    }
-
-    @media (max-width: 375.99px) {
-      font-size: 2.4rem;
-      margin-bottom: 10px;
-    }
   }
 
   &__intro {
-    font-size: 3rem;
-    line-height: 1.6;
+    font-size: clamp(2.2rem, 3.5vw, 3rem);
+    line-height: 100%;
     font-weight: 500;
     color: v.$text-primary;
 
-    @media (max-width: 768px) {
-      font-size: 2.2rem;
-      line-height: 1.4;
-    }
-
-    @media (max-width: 375.99px) {
-      font-size: 1.8rem;
-      line-height: 1.3;
+    @media (max-width: 768.99px) {
+      br {
+        display: none;
+      }
     }
   }
 
@@ -76,12 +44,15 @@
   &__imageCards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-bottom: 60px;
+    gap: clamp(15px, 2.5vw, 30px);
+    margin-bottom: clamp(30px, 6vw, 60px);
 
     @media (max-width: 768px) {
       gap: 20px;
       margin-bottom: 40px;
+    }
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     @media (max-width: 375.99px) {
@@ -93,65 +64,39 @@
 
   &__imageCard {
     border-radius: 16px;
-    border: 4px solid transparent;
+    border: clamp(2px, 0.3vw, 4px) solid transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px;
+    padding: clamp(15px, 1.8vw, 25px);
     cursor: pointer;
     transition: border-color 0.3s ease;
 
-    @media (max-width: 768px) {
-      padding: 20px;
-    }
-
-    @media (max-width: 375.99px) {
-      padding: 15px;
-    }
-
     &--active {
-      border: 4px solid #C2F23C;
-
-      @media (max-width: 375.99px) {
-        border-width: 2px;
-      }
+      border: clamp(2px, 0.3vw, 4px) solid #C2F23C;
     }
   }
 
   &__image {
-    max-width: 300px;
+    max-width: min(300px, 100%);
     height: auto;
     display: block;
-
-    @media (max-width: 768px) {
-      max-width: 100%;
-    }
   }
 
   &__imageCaption {
-    padding: 15px;
+    padding: clamp(8px, 1.2vw, 15px);
     text-align: center;
     font-weight: 500;
     color: v.$text-primary;
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 3vw, 3rem);
     margin: 0;
-
-    @media (max-width: 768px) {
-      font-size: 2.4rem;
-      padding: 10px;
-    }
-
-    @media (max-width: 375.99px) {
-      font-size: 1.8rem;
-      padding: 8px;
-    }
   }
 
   // Блок с предметами
   &__subjects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: clamp(15px, 2vw, 25px);
     opacity: 1;
     transition: opacity 0.3s ease;
 
@@ -176,49 +121,24 @@
 
   &__subject {
     background: white;
-    padding: 25px;
+    padding: clamp(15px, 1.8vw, 25px);
     border-radius: 16px;
-
-    @media (max-width: 768px) {
-      padding: 20px;
-    }
-
-    @media (max-width: 375.99px) {
-      padding: 15px;
-    }
   }
 
   &__subjectTitle {
     color: v.$text-dark;
     margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 2.4rem;
+    margin-bottom: clamp(8px, 1vw, 10px);
+    font-size: clamp(2rem, 2.5vw, 2.4rem);
     font-weight: 400;
     line-height: 120%;
-
-    @media (max-width: 768px) {
-      font-size: 2rem;
-    }
-
-    @media (max-width: 375.99px) {
-      font-size: 1.6rem;
-      margin-bottom: 8px;
-    }
   }
 
   &__subjectDesc {
     color: v.$text-dark;
     margin: 0;
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 2vw, 2rem);
     font-weight: 400;
     line-height: 100%;
-
-    @media (max-width: 768px) {
-      font-size: 1.6rem;
-    }
-
-    @media (max-width: 375.99px) {
-      font-size: 1.4rem;
-    }
   }
 }

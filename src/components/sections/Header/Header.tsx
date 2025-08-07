@@ -30,19 +30,34 @@ export const Header = () => {
   }, []);
 
   useEffect(() => {
-    // Блокируем прокрутку страницы при открытом меню
     if (isMenuOpen) {
+      document.body.classList.add('menu-open');
       document.body.style.overflow = 'hidden';
     } else {
+      document.body.classList.remove('menu-open');
       document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.height = '';
     }
   }, [isMenuOpen]);
 
   const handleNavClick = (e: React.MouseEvent, href: string) => {
     e.preventDefault();
     const id = href.replace('#', '');
-    smoothScrollTo(id);
-    setIsMenuOpen(false); // Закрываем меню после клика
+    setIsMenuOpen(false);
+    
+    // Добавляем задержку для полного закрытия меню
+    setTimeout(() => {
+      // Получаем актуальную высоту хедера
+      const header = document.querySelector('header');
+      const headerHeight = header?.offsetHeight || 80;
+      
+      smoothScrollTo(id, headerHeight + 20); // Добавляем небольшой отступ
+      
+      // На случай, если страница уже прокручена
+      window.dispatchEvent(new Event('scroll'));
+    }, 350); // Увеличиваем задержку для анимации закрытия меню
   };
 
   const toggleMenu = () => {
@@ -52,7 +67,8 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link href="/" className={styles.logoLink}>
+        <Link href="/" 
+        className={styles.logoLink}>
           <Logo size={isMobile ? 'small' : 'medium'} />
         </Link>
         
