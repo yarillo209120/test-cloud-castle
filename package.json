@@ -4,15 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "export": "next export",
+    "build": "next build && next export",
     "deploy": "gh-pages -d out",
-    "predeploy": "npm run build && npm run export",
+    "predeploy": "npm run build",
     "start": "next start",
     "lint": "next lint"
   },
-  "homepage": "https://yarillo209120.github.io/test-cloud-castle",
-
   "dependencies": {
     "next": "15.4.5",
     "react": "19.1.0",
