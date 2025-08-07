@@ -3,10 +3,17 @@ import styles from './page.module.scss';
 import { RouteSection } from "@/components/sections/RouteSection";
 import { BingoSection } from "@/components/sections/BingoSection";
 import { FaqSection } from "@/components/sections/FaqSection";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <meta property="og:locale" content="ru_RU" />
+        <link rel="canonical" href="https://yarillo209120.github.io/test-cloud-castle" />
+        <meta name="geo.region" content="RU" />
+        <meta name="geo.placename" content="Екатеринбург" />
+      </Head>
       <section className={styles.hero}>
         <div className={styles.hero__container}>
           <div className={styles.hero__content}>
