@@ -38,7 +38,7 @@ export const RouteSection = () => {
               onClick={() => handleTabClick(tab.id)}
             >
               <Image
-                src={`/images/route-img-${tab.id}.webp`}
+                src={`images/route-img-${tab.id}.webp`}
                 alt={tab.title}
                 width={300}
                 height={200}

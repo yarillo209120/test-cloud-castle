@@ -21,7 +21,7 @@ export default function Home() {
           </div>
           <div className={styles.hero__image}>
             <Image
-              src="/images/main-image.webp"
+              src="images/main-image.webp"
               alt="Основная картинка"
               width={600}
               height={400}
@@ -36,7 +36,7 @@ export default function Home() {
           <h2 className={styles.whatsNext__title}>Что ждёт за плотинкой</h2>
           <div className={styles.whatsNext__imageWrapper}>
             <Image
-              src="/images/whats-next-image.webp"
+              src="images/whats-next-image.webp"
               alt="Картинка что ждем за плотинкой?"
               width={600}
               height={400}
