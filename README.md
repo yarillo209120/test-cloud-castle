@@ -31,39 +31,39 @@
 
 🎨 Структура проекта
 
-test-cloud-castle/
-├── app/                    # Next.js 13 App Router
-│   ├── layout.tsx          # Главный лейаут
-│   ├── page.module.scss    # Основные стили страницы
-|   └── page.tsx            # Основная страница
-│
-├── public/                 # Статические ресурсы
-│   ├── fonts/              # Шрифты (WOFF2, WOFF)
-│   ├── images/             # Оптимизированные изображения
-│   ├── favicon.ico         # Фавиконки
-│   ├── robots.txt          # Правила для поисковиков
-|   └── sitemap.hml         # Карта сайта
-│
-├── src/
-│   ├── components/         # Компоненты
-│   │   ├── sections/       # Секции страницы
-│   │   │   ├── Header/     # Хедер с модульными стилями
-│   │   │   │   ├── Header.tsx
-│   │   │   │   └── Header.module.scss
-│   │   │   └── ...         # Другие секции
-│   │   │
-│   │   └── ui/             # Переиспользуемые UI-компоненты
-│   │       ├── Logo/
-│   │       └── ...
+test-cloud-castle/<br>
+├── app/                    # Next.js 13 App Router<br>
+│   ├── layout.tsx          # Главный лейаут<br>
+│   ├── page.module.scss    # Основные стили страницы<br>
+|   └── page.tsx            # Основная страница<br>
+│<br>
+├── public/                 # Статические ресурсы<br>
+│   ├── fonts/              # Шрифты (WOFF2, WOFF)<br>
+│   ├── images/             # Оптимизированные изображения<br>
+│   ├── favicon.ico         # Фавиконки<br>
+│   ├── robots.txt          # Правила для поисковиков<br>
+|   └── sitemap.hml         # Карта сайта<br>
+│<br>
+├── src/<br>
+│   ├── components/         # Компоненты<br>
+│   │   ├── sections/       # Секции страницы<br>
+│   │   │   ├── Header/     # Хедер с модульными стилями<br>
+│   │   │   │   ├── Header.tsx<br>
+│   │   │   │   └── Header.module.scss<br>
+│   │   │   └── ...         # Другие секции<br>
+│   │   │<br>
+│   │   └── ui/             # Переиспользуемые UI-компоненты<br>
+│   │       ├── Logo/<br>
+│   │       └── ...<br>
 │   │
-│   ├── styles/             # Глобальные стили
-│   │   ├── globals.scss    # Основные стили
-│   │   ├── variables.scss  # SCSS-переменные
-│   │   └── normalize.scss  # Стили нормализации
+│   ├── styles/             # Глобальные стили<br>
+│   │   ├── globals.scss    # Основные стили<br>
+│   │   ├── variables.scss  # SCSS-переменные<br>
+│   │   └── normalize.scss  # Стили нормализации<br>
 │   │
-│   └── utils/              # Вспомогательные функции
-│       ├── smoothScroll.ts # Утилиты скролла
+│   └── utils/              # Вспомогательные функции<br>
+│       ├── smoothScroll.ts # Утилиты скролла<br>
 │
-├── next.config.js          # Конфигурация Next.js
-├── package.json            # Зависимости и скрипты
-└── README.md               # Документация проекта
+├── next.config.js          # Конфигурация Next.js<br>
+├── package.json            # Зависимости и скрипты<br>
+└── README.md               # Документация проекта<br>
