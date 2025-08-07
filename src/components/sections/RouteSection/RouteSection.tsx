@@ -3,11 +3,23 @@
 import Image from "next/image";
 import { useRouteContent } from "./useRouteContent";
 import styles from './RouteSection.module.scss';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export const RouteSection = () => {
   const { activeTab, setActiveTab, currentContent, tabs } = useRouteContent();
   const [transitionStage, setTransitionStage] = useState<'in' | 'out'>('in');
+  const [isMobile, setIsMobile] = useState(false);
+  const subjectsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 375);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleTabClick = (tabId: number) => {
     if (tabId === activeTab) return;
@@ -16,6 +28,18 @@ export const RouteSection = () => {
     setTimeout(() => {
       setActiveTab(tabId);
       setTransitionStage('in');
+      
+      if (isMobile) {
+        setTimeout(() => {
+          if (subjectsRef.current) {
+            const subjectsPosition = subjectsRef.current.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({
+              top: subjectsPosition - 80,
+              behavior: 'smooth'
+            });
+          }
+        }, 350);
+      }
     }, 300);
   };
 
@@ -49,9 +73,12 @@ export const RouteSection = () => {
           ))}
         </div>
 
-        <div className={`${styles.route__subjects} ${
-          transitionStage === 'out' ? styles['route__subjects--fadeOut'] : styles['route__subjects--fadeIn']
-        }`}>
+        <div 
+          ref={subjectsRef}
+          className={`${styles.route__subjects} ${
+            transitionStage === 'out' ? styles['route__subjects--fadeOut'] : styles['route__subjects--fadeIn']
+          }`}
+        >
           {currentContent.subjects.map((subject) => (
             <div key={subject.id} className={styles.route__subject}>
               <h3 className={styles.route__subjectTitle}>{subject.title}</h3>
