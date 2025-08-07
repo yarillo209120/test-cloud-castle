@@ -11,15 +11,17 @@
     gap: 30px;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
 
     @media (max-width: 768px) {
       align-items: flex-start;
+      padding: 0 15px;
     }
 
     @media (max-width: 600px) {
       gap: 20px;
       flex-direction:column-reverse;
+      padding: 0 10px;
     }
   }
 
@@ -115,12 +117,15 @@
   // Элемент container
   &__container {
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
     text-align: center;
     max-width: 1440px;
+    @media (max-width: 768px) {
+      padding: 0 15px;
+    }
 
-    @media (min-width: 769px) {
-      padding: 0 40px;
+    @media (max-width: 375.99px) {
+      padding: 0 10px;
     }
   }
 
