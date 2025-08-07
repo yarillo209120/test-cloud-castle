@@ -4,6 +4,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    serverComponents: false,
+  },
 
   basePath: process.env.NODE_ENV === 'production' ? '/test-cloud-castle' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/test-cloud-castle/' : '',
