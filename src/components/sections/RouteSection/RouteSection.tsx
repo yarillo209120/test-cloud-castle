@@ -16,7 +16,7 @@ export const RouteSection = () => {
     setTimeout(() => {
       setActiveTab(tabId);
       setTransitionStage('in');
-    }, 300); // Должно совпадать с временем анимации
+    }, 300);
   };
 
   return (

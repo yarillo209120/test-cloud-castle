@@ -16,7 +16,7 @@
     }
   }
 
-  // Заголовочный блок
+
   &__header {
     text-align: center;
     margin-bottom: clamp(20px, 6vw, 50px);
@@ -48,7 +48,6 @@
     }
   }
 
-  // Блок с карточками изображений
   &__imageCards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -100,7 +99,6 @@
     margin: 0;
   }
 
-  // Блок с предметами
   &__subjects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

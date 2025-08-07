@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-// Тип для карточки бинго
 export type BingoCard = {
   id: number;
   title: string;
@@ -8,7 +7,6 @@ export type BingoCard = {
   bgImage?: string;
 };
 
-// Тип возвращаемого значения хука
 type UseBingoCardsReturn = {
   cards: BingoCard[];
 };

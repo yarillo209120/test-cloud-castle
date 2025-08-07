@@ -28,10 +28,10 @@
   display: flex;
   align-items: center;
   transition: opacity 0.3s ease;
-  z-index: 110; // Чтобы лого было поверх меню
+  z-index: 110; 
 }
 
-// Десктопное меню
+
 .nav {
   @media (max-width: 768px) {
     display: none;
@@ -68,7 +68,7 @@
   }
 }
 
-// Бургер-меню
+
 .burger {
   display: none;
   flex-direction: column;
@@ -107,7 +107,7 @@
   }
 }
 
-// Мобильное меню
+
 .mobileMenu {
   position: fixed;
   top: 0;
@@ -190,18 +190,16 @@
 }
 
 .mobileMenu {
-  // Существующие стили остаются
-  
-  // Добавляем это:
+
   @media (max-width: 375.99px) {
     &.mobileMenuOpen {
       overflow-y: auto;
-      -webkit-overflow-scrolling: touch; // Для плавного скролла на iOS
+      -webkit-overflow-scrolling: touch;
     }
   }
 }
 
-// Добавляем этот медиа-запрос
+
 @media (max-width: 768px) {
   body.menu-open {
     position: fixed;

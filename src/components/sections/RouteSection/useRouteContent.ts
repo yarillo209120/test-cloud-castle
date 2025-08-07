@@ -13,7 +13,7 @@ type RouteContent = {
 };
 
 export const useRouteContent = () => {
-  const [activeTab, setActiveTab] = useState<number>(1); // По умолчанию "Основные предметы"
+  const [activeTab, setActiveTab] = useState<number>(1); 
 
   const content: Record<number, RouteContent> = {
     1: {
