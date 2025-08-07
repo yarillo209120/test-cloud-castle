@@ -25,7 +25,7 @@ export const Logo: React.FC<LogoProps> = ({
   return (
     <div className={`${styles.logo} ${styles[size]} ${className}`}>
       <Image
-        src="/images/main-logo.webp"
+        src="images/main-logo.webp"
         alt="Логотип"
         width={dimensions.width}
         height={dimensions.height}
