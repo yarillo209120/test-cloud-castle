@@ -1,15 +1,13 @@
 @use 'variables' as v;
 @use 'fonts';
-// Импорт normalize
 @import 'normalize';
 
 :root {
-  font-size: 62.5%; /* 10px/16px = 62.5% */
+  font-size: 62.5%;
 }
 
 
 body {
-  // Дополнительные стили для body
   font-family: 'Roboto', -apple-system, sans-serif;
   font-size: 2rem;
   line-height: 1.5;

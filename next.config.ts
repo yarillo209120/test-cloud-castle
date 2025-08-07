@@ -1,3 +1,4 @@
+
 const nextConfig = {
   output: 'export',
   images: {
@@ -6,6 +7,7 @@ const nextConfig = {
 
   basePath: process.env.NODE_ENV === 'production' ? '/test-cloud-castle' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/test-cloud-castle/' : '',
+  
 }
 
 module.exports = nextConfig
