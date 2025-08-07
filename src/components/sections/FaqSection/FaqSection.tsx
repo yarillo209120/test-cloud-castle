@@ -36,7 +36,7 @@ export const FaqSection = () => {
               key={index}
               className={`${styles.faq__item} ${activeIndex === index ? styles['faq__item--active'] : ''}`}
             >
-              <button 
+              <div 
                 className={styles.faq__question}
                 onClick={() => toggleAccordion(index)}
                 aria-expanded={activeIndex === index}
@@ -51,7 +51,7 @@ export const FaqSection = () => {
                     height={25}
                   />
                 </div>
-              </button>
+              </div>
               
               <div 
                 id={`faq-answer-${index}`}
