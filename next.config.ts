@@ -6,6 +6,8 @@ const nextConfig = {
   },
   experimental: {
     serverComponents: false,
+    optimizeFonts: false,
+    appDir: false
   },
 
   basePath: process.env.NODE_ENV === 'production' ? '/test-cloud-castle' : '',
