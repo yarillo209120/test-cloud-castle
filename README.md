@@ -29,3 +29,41 @@
 | GitHub Pages     | Деплой статического сайта     |
 
 
+🎨 Структура проекта
+
+test-cloud-castle/
+├── app/                    # Next.js 13 App Router
+│   ├── layout.tsx          # Главный лейаут
+│   ├── page.module.scss    # Основные стили страницы
+|   └── page.tsx            # Основная страница
+│
+├── public/                 # Статические ресурсы
+│   ├── fonts/              # Шрифты (WOFF2, WOFF)
+│   ├── images/             # Оптимизированные изображения
+│   ├── favicon.ico         # Фавиконки
+│   ├── robots.txt          # Правила для поисковиков
+|   └── sitemap.hml         # Карта сайта
+│
+├── src/
+│   ├── components/         # Компоненты
+│   │   ├── sections/       # Секции страницы
+│   │   │   ├── Header/     # Хедер с модульными стилями
+│   │   │   │   ├── Header.tsx
+│   │   │   │   └── Header.module.scss
+│   │   │   └── ...         # Другие секции
+│   │   │
+│   │   └── ui/             # Переиспользуемые UI-компоненты
+│   │       ├── Logo/
+│   │       └── ...
+│   │
+│   ├── styles/             # Глобальные стили
+│   │   ├── globals.scss    # Основные стили
+│   │   ├── variables.scss  # SCSS-переменные
+│   │   └── normalize.scss  # Стили нормализации
+│   │
+│   └── utils/              # Вспомогательные функции
+│       ├── smoothScroll.ts # Утилиты скролла
+│
+├── next.config.js          # Конфигурация Next.js
+├── package.json            # Зависимости и скрипты
+└── README.md               # Документация проекта
