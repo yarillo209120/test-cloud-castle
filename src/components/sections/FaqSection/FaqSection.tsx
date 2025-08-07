@@ -45,7 +45,7 @@ export const FaqSection = () => {
                 <span>{item.question}</span>
                 <div className={styles.faq__icon}>
                   <Image
-                    src="/images/accordion-arrow.png"
+                    src="images/accordion-arrow.png"
                     alt={activeIndex === index ? "Закрыть" : "Открыть"}
                     width={24}
                     height={25}
