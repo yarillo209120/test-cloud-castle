@@ -29,18 +29,25 @@ export const FaqSection = () => {
     <section className={styles.faq} id="faqs">
       <div className={styles.faq__container}>
         <h2 className={styles.faq__title}>Еще вопросы?</h2>
-        
+
         <div className={styles.faq__accordion}>
           {faqs.map((item, index) => (
-            <div 
+            <div
               key={index}
               className={`${styles.faq__item} ${activeIndex === index ? styles['faq__item--active'] : ''}`}
             >
-              <div 
+              <div
                 className={styles.faq__question}
                 onClick={() => toggleAccordion(index)}
+                role="button"
+                tabIndex={0}
                 aria-expanded={activeIndex === index}
                 aria-controls={`faq-answer-${index}`}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    toggleAccordion(index);
+                  }
+                }}
               >
                 <span>{item.question}</span>
                 <div className={styles.faq__icon}>
@@ -52,8 +59,8 @@ export const FaqSection = () => {
                   />
                 </div>
               </div>
-              
-              <div 
+
+              <div
                 id={`faq-answer-${index}`}
                 className={styles.faq__answer}
                 style={{

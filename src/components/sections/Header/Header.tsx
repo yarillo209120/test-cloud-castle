@@ -23,7 +23,7 @@ export const Header = () => {
       setIsMobile(window.innerWidth <= 768);
     };
 
-    handleResize(); // Проверяем при монтировании
+    handleResize();
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
@@ -47,17 +47,17 @@ export const Header = () => {
     const id = href.replace('#', '');
     setIsMenuOpen(false);
     
-    // Добавляем задержку для полного закрытия меню
+ 
     setTimeout(() => {
-      // Получаем актуальную высоту хедера
+
       const header = document.querySelector('header');
       const headerHeight = header?.offsetHeight || 80;
       
-      smoothScrollTo(id, headerHeight + 20); // Добавляем небольшой отступ
+      smoothScrollTo(id, headerHeight + 20); 
       
-      // На случай, если страница уже прокручена
+   
       window.dispatchEvent(new Event('scroll'));
-    }, 350); // Увеличиваем задержку для анимации закрытия меню
+    }, 350); 
   };
 
   const toggleMenu = () => {

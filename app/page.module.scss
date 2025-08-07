@@ -4,7 +4,6 @@
   padding: 40px 0;
   position: relative;
 
-  // Элемент container
   &__container {
     display: flex;
     align-items: center;
@@ -25,7 +24,7 @@
     }
   }
 
-  // Элемент content
+
   &__content {
     flex: 1;
     max-width: 100%;
@@ -35,7 +34,6 @@
     }
   }
 
-  // Элемент title
   &__title {
     font-size: 5.4rem;
     line-height: 95%;
@@ -54,7 +52,7 @@
     }
   }
 
-  // Элемент text
+
   &__text {
     font-size: 2rem;
     font-weight: 400;
@@ -74,7 +72,7 @@
     }
   }
 
-  // Элемент image
+ 
   &__image {
     flex: 1;
     position: relative;
@@ -95,7 +93,7 @@
     }
   }
 
-  // Элемент img
+ 
   &__img {
     width: 100%;
     height: auto;
@@ -105,7 +103,6 @@
   }
 }
 
-// Блок whatsNext
 .whatsNext {
   position: relative;
   padding: 40px 0;
@@ -114,7 +111,7 @@
     padding: 60px 0;
   }
 
-  // Элемент container
+
   &__container {
     margin: 0 auto;
     padding: 0 40px;
@@ -129,7 +126,7 @@
     }
   }
 
-  // Элемент title
+
   &__title {
     font-size: 4.2rem;
     font-weight: 500;
@@ -151,7 +148,7 @@
     }
   }
 
-  // Элемент imageWrapper
+
   &__imageWrapper {
     margin: 0 auto 20px;
     max-width: 100%;
@@ -165,7 +162,7 @@
     }
   }
 
-  // Элемент image
+
   &__image {
     width: 100%;
     height: auto;
@@ -173,7 +170,7 @@
     transition: transform 0.3s ease;
   }
 
-  // Элемент description
+
   &__description {
     color: v.$text-primary;
     font-size: 3rem;
