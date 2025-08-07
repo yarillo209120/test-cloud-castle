@@ -13,7 +13,7 @@ export const RouteSection = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 375);
+      setIsMobile(window.innerWidth < 414);
     };
 
     handleResize();
